@@ -11,12 +11,16 @@ const Drawer = () => {
         console.log(e.touches[0].clientY);
     }
 
-    const handleTouchMove = () => {
+    const handleTouchMove = (e) => {
         console.log("touch move");
+        console.log(e);
+        console.log(e.touches[0].clientY);
     }
 
-    const handleTouchEnd = () => {
+    const handleTouchEnd = (e) => {
         console.log("touch end");
+        console.log(e);
+        console.log(e.changedTouches[0].clientY);
     }
 
     const handleTouchCancel = () => {
@@ -27,8 +31,8 @@ const Drawer = () => {
         <div className="drawer swipeable" 
                 onClick={() => handleClick()}
                 onTouchStart={(e) => handleTouchStart(e)}
-                onTouchMove={() => handleTouchMove()}
-                onTouchEnd={() => handleTouchEnd()}
+                onTouchMove={(e) => handleTouchMove(e)}
+                onTouchEnd={(e) => handleTouchEnd(e)}
                 onTouchCancel={() => handleTouchCancel()}
                 >
             <img src={logo} className="App-logo" alt="logo" />
