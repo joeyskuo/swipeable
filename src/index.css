@@ -15,4 +15,11 @@ code {
 .drawer {
   background-color: rgb(30, 30, 30);
   border-radius: 20px 20px 0px 0px;
+  position: absolute;
+  width: 100%;
+}
+
+.container {
+  position: relative;
+  width: 100%;
 }
