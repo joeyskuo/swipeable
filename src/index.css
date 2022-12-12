@@ -30,3 +30,8 @@ code {
   width: 100%;
   background-color: #282c34;
 }
+
+.drawer-btn {
+  position: absolute;
+  top: 50px;
+}
