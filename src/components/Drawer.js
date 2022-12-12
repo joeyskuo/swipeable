@@ -30,8 +30,14 @@ const Drawer = () => {
         console.log("touch end");
         console.log(e);
         console.log(e.changedTouches[0].clientY);
-        setDrawerPosition(0);
-        setStartPosition(0);
+        const currentPosition = e.changedTouches[0].clientY;
+        const offset = currentPosition - startPosition;
+        if(offset > 150) {
+            hideDrawer();
+        } else {
+            setStartPosition(0);
+            setDrawerPosition(defaultPosition);
+        }
     }
 
     const handleTouchCancel = () => {
