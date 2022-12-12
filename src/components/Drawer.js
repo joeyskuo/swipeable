@@ -44,8 +44,13 @@ const Drawer = () => {
         }
     }
 
+    const hideDrawer = () => {
+        const drawer = document.querySelector('.drawer');
+        drawer.classList.remove('visible');
+    }
+
     return (
-        <div className="drawer swipeable" 
+        <div className="drawer swipeable visible" 
                 onClick={() => handleClick()}
                 onTouchStart={(e) => handleTouchStart(e)}
                 onTouchMove={(e) => handleTouchMove(e)}
