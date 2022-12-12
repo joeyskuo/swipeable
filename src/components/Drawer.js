@@ -3,7 +3,7 @@ import {useState} from 'react';
 
 const Drawer = () => {
 
-    const defaultPosition = 500;
+    const defaultPosition = 400;
     const [drawerPosition, setDrawerPosition] = useState(defaultPosition);
     const [startPosition, setStartPosition] = useState(0);
 
