@@ -3,7 +3,8 @@ import {useState} from 'react';
 
 const Drawer = () => {
 
-    const [drawerPosition, setDrawerPosition] = useState(0);
+    const defaultPosition = 500;
+    const [drawerPosition, setDrawerPosition] = useState(defaultPosition);
     const [startPosition, setStartPosition] = useState(0);
 
     const handleClick = () => {
@@ -22,7 +23,7 @@ const Drawer = () => {
         console.log(e.touches[0].clientY);
         const currentPosition = e.touches[0].clientY;
         const offset = currentPosition - startPosition;
-        setDrawerPosition(offset);
+        setDrawerPosition(defaultPosition + offset);
     }
 
     const handleTouchEnd = (e) => {
