@@ -18,6 +18,11 @@ code {
   position: absolute;
   height: 500px;
   width: 100%;
+  transition: transform 333ms ease;
+}
+
+.visible {
+  transform: translateY(calc(-500px));
 }
 
 .container {
